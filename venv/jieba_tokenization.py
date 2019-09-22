@@ -63,7 +63,7 @@ word_bag= cntVector.get_feature_names()
 
 
 lda = LatentDirichletAllocation(n_components=10,doc_topic_prior=0.001,topic_word_prior=0.8,learning_offset=50.,random_state=0)
-####docres: topic/doc distribution
+####docres: topic/doc distributionn
 docres = lda.fit_transform(cntTf)
 
 
