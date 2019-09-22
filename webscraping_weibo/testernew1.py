@@ -37,7 +37,7 @@ filelist=['wb1.htm','wb2.htm','wb3.htm','wb4.htm','wb5.htm','wb6.htm','wb7.htm',
 
 
 
-for i in range(39):
+for i in range(80):
     print(filelist[i])
     raw_html = open(filelist[i]).read()
 
@@ -89,7 +89,7 @@ print(len(chartfivetitle))
 #write the data into a csv file
 #def writechart(finalchart,csvfilename):
 
-with open('TrTwAllMay07_10.csv', "w", newline='') as my_csv:
+with open('TrTwAllMay06th.csv', "w", newline='') as my_csv:
     csvWriter = csv.writer(my_csv, delimiter=',')
     csvWriter.writerows(chartfivetitle)
 
