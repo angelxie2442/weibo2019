@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="viewport" content="initial-scale=1,minimum-scale=1"/>
+    <title>微博搜索</title>
+    <link href="//img.t.sinajs.cn/t4/appstyle/searchpc/css/pc/css/video.css?version=202006291410" rel="stylesheet"/>
+    <link href="//img.t.sinajs.cn/t4/appstyle/searchpc/css/pc/css/global.css?version=202006291410" rel="stylesheet"/>
+    <link href="//img.t.sinajs.cn/t4/appstyle/searchpc/css/pc/css/module.css?version=202006291410" rel="stylesheet"/>
+    <link href="//img.t.sinajs.cn/t4/appstyle/searchpc/css/pc/css/page.css?version=202006291410" rel="stylesheet"/>
+    <link href="//img.t.sinajs.cn/t4/appstyle/searchpc/css/pc/css/card.css?version=202006291410" rel="stylesheet"/>
+    <link href="//img.t.sinajs.cn/t4/appstyle/searchpc/css/pc/css/css_v6/layer/layer_show_pic.css?version=202006291410"
+          rel="stylesheet"/>
+    
+    <script type="text/javascript">
+        var $PHOTO_TAGS=[]
+        var $CONFIG = {};
+        $CONFIG['islogin'] = '1';
+        $CONFIG['uid'] = '6980010397';
+        $CONFIG['nick'] = 'beibei2442';
+        $CONFIG['domain'] = '';
+        $CONFIG['watermark'] = 'beibei2442';
+        $CONFIG['prov'] = '11:北京';
+        $CONFIG['city'] = '';
+        $CONFIG['setCover'] = 1; //ie6hack
+        $CONFIG['version'] = '202006291410';
+        $CONFIG['bigpipe'] = 'false';
+        $CONFIG['timeDiff'] = (new Date() - 1593800294000);
+        $CONFIG['product'] = 'search';
+        $CONFIG['pageid'] = 'weibo';
+        $CONFIG['skin'] = '';
+        $CONFIG['lang'] = 'zh-cn';
+        $CONFIG['jsPath'] = '//jstest.t.sinajs.cn/t4/';
+        $CONFIG['cssPath'] = '//img.t.sinajs.cn/t4/';
+        $CONFIG['imgPath'] = '//img.t.sinajs.cn/t4/';
+        $CONFIG['servertime'] = 1593800294;
+        $CONFIG['ad_url_jump'] = '';
+        $CONFIG['$webim'] = 0; //1;
+        $CONFIG['mJsPath'] = ['https://js{n}.t.sinajs.cn/t4/', 1, 2];
+        $CONFIG['mCssPath'] = ['https://img{n}.t.sinajs.cn/t4/', 1, 2];
+        $CONFIG['s_domain'] = '//s.weibo.com';
+        $CONFIG['s_search'] = '%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9';
+        $CONFIG['isAuto'] = 0;//0自动播放
+    </script>
+    
+    
+    <script src="//js.t.sinajs.cn/t5/pack/js/bootstrap.js"></script>
+</head>
+<body class="wbs-feed">
+<style>
+    .wrap-continuous{
+        margin-bottom: 0px;
+        border: 0px;
+    }
+</style>
+<div class="m-main">
+    <!--搜索-->
+<div class="m-search" id="pl_feedtop_top">
+    <div class="logo"><a href="/" class="logo_img"></a></div>
+    <div class="searchbox" node-type="searchBar">
+    <div class="search-input">
+        <input type="text" node-type="text" maxlength="40" autocomplete="off" value="特朗普 推特"/>
+        <div class="m-sug-list" node-type="suggestbox">
+        </div>
+    </div>
+    <button class="s-btn-b" node-type="submit" >搜索</button>
+</div>
+        <div class="action">
+        <a href="javascript:void(0);" node-type="advsearch">高级搜索</a>
+    </div>
+    </div>
+<!--/搜索-->
+        <!--主导航-->
+<div class="m-main-nav s-mt28">
+    <ul>
+        <li><a class="cur" href="/weibo?q=%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9&Refer=weibo_weibo" title="综合">综合</a></li>
+        <li><a  href="/user?q=%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9&Refer=weibo_user" title="找人">找人</a></li>
+        <li><a  href="/article?q=%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9&Refer=weibo_article" title="文章">文章</a></li>
+        <li><a  href="/video?q=%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9&xsort=hot&hasvideo=1&tw=video&Refer=weibo_video" title="视频">视频</a></li>
+        <li><a  href="/pic?q=%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9&Refer=weibo_pic" title="图片">图片</a></li>
+        <li><a  href="/topic?q=%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9&pagetype=topic&topic=1&Refer=weibo_topic" title="话题">话题</a></li>
+            </ul>
+</div>
+<!--/主导航-->
+    
+    <div id="pl_feed_main">
+        <!--提示-->
+                <!--/提示-->
+        <!--内容-->
+        <div class="m-wrap">
+            <div class="m-con-l" id="pl_feedlist_index">
+                                <div class="m-filtertab">
+    <div class="tab-l"><span class="ctips">2019-05-06 00时~2019-05-06 09时<a href="/weibo/%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE?q=%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9&Refer=g"><i class="wbicon">X</i></a></span>    </div>
+    <div class="tab-r">
+        <a href="/weibo/%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE?q=%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9" title="返回">返回</a>
+        <a href="javascript:void(0);" node-type="advsearch">重新筛选</a>
+    </div>
+</div>
+                <!--cate流-->
+                <div>
+                                                                                                <!--微博card-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4368874805137429" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/6219393679?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:1,click:user_pic"><img src="https://tvax2.sinaimg.cn/crop.0.0.1080.1080.50/006MTWphly8g1wjr4j7avj30u00u0q6l.jpg?KID=imgbed,tva&Expires=1593811094&ssig=Phf%2FFEhPJ%2F" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4368874805137429&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/6219393679?refer_flag=1001030103_" class="name" target="_blank" nick-name="期郎" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:1,click:user_name">期郎</a>
+                        <a href="//vip.weibo.com" target="_blank" title="微博会员"><i class="icon-vip icon-member"></i></a>
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="期郎">
+                    突发事件！<em class="s-color-red">特朗普</em>在北京时间凌晨，突然在<em class="s-color-red">推</em><em class="s-color-red">特</em>上称要对2000亿元美元的中国商品加税至25%（原执行是10%），并将对另外3200亿美元的商品加税。这种消息显然对股市的打击是相当大的。眼见两国贸易协谈判进入冲刺阶段，<em class="s-color-red">特</em>郎普突然掀桌子，露出其讹诈性格，以胜负手逼迫中国接受美国的所有条件。后续就看能否 ​  <a href="//weibo.com/6219393679/HsTKolytL?refer_flag=1001030103_" action-type="fl_unfold" target="_blank">展开全文<i class="wbicon">c</i></a>                </p>
+                                <p class="txt" node-type="feed_list_content_full" nick-name="期郎" style="display: none">
+                    突发事件！<em class="s-color-red">特朗普</em>在北京时间凌晨，突然在<em class="s-color-red">推</em><em class="s-color-red">特</em>上称要对2000亿元美元的中国商品加税至25%（原执行是10%），并将对另外3200亿美元的商品加税。这种消息显然对股市的打击是相当大的。眼见两国贸易协谈判进入冲刺阶段，<em class="s-color-red">特</em>郎普突然掀桌子，露出其讹诈性格，以胜负手逼迫中国接受美国的所有条件。后续就看能否峰回路转！ <a href="javascript:void(0);" action-type="fl_fold">收起全文<i class="wbicon">d</i></a>
+                </p>
+                                                <p class="from" >
+                                            <a href="//weibo.com/6219393679/HsTKolytL?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:1,click:wb_time">
+                        2019年05月06日 08:59
+                        </a>
+                                         &nbsp;来自 <a href="//weibo.com/" rel="nofollow">iPhone客户端</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="feed_list_favorite" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:1,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4368874805137429&name=期郎&uid=6219393679&suda-data=key%3Dtblog_search_weibo%26value%3Dseqid%3A159380029445301819372%7Ctype%3A1%7Ct%3A0%7Cpos%3A1-0%7Cq%3A%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE%2520%25E6%258E%25A8%25E7%2589%25B9%7Cext%3Acate%3A31%2Cclick:do_repost,mid:4368874805137429" action-type="feed_list_forward" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:1,click:repost,mid:4368874805137429"> 转发 </a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:1,click:comment" action-type="feed_list_comment">评论 </a></li>
+                                                                <li><a title="赞" action-data="mid=4368874805137429" action-type="feed_list_like" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:1,click:like,mid:4368874805137429,act:add"><i class="icon-act icon-act-praise"></i> <em></em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4368874772176927" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/5783471717?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:2,click:user_pic"><img src="https://tvax2.sinaimg.cn/crop.0.0.664.664.50/006joRbTly8fy9omvhlvsj30ig0igdh1.jpg?KID=imgbed,tva&Expires=1593811094&ssig=G4txK1%2BOFc" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4368874772176927&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/5783471717?refer_flag=1001030103_" class="name" target="_blank" nick-name="有生之草" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:2,click:user_name">有生之草</a>
+                        <a href="//vip.weibo.com" target="_blank" title="微博会员"><i class="icon-vip icon-member"></i></a>
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="有生之草">
+                    盘前语。昨日之前，大V网红砖家媒体口径一致，即六日肯定高开，理由呢？很多，N种解读，其实，没说的那条才是理由，因美股涨了；然今早，风向突变，所有的大V网红砖家媒体说，今天肯定低开，理由呢？没说。其实，<em class="s-color-red">特朗普</em>又开始打贸易战了，<em class="s-color-red">推</em><em class="s-color-red">特</em>火力加强，美国已中弹，当然吾方也会重伤。股民黑周一啊。 ​                </p>
+                                                <p class="from" >
+                                            <a href="//weibo.com/5783471717/HsTKl98jJ?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:2,click:wb_time">
+                        2019年05月06日 08:59
+                        </a>
+                                         &nbsp;来自 <a href="//app.weibo.com/t/feed/62EL2k" rel="nofollow">华为手机 畅享玩不停</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="feed_list_favorite" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:2,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4368874772176927&name=有生之草&uid=5783471717&suda-data=key%3Dtblog_search_weibo%26value%3Dseqid%3A159380029445301819372%7Ctype%3A1%7Ct%3A0%7Cpos%3A1-0%7Cq%3A%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE%2520%25E6%258E%25A8%25E7%2589%25B9%7Cext%3Acate%3A31%2Cclick:do_repost,mid:4368874772176927" action-type="feed_list_forward" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:2,click:repost,mid:4368874772176927"> 转发 1</a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:2,click:comment" action-type="feed_list_comment">评论 2</a></li>
+                                                                <li><a title="赞" action-data="mid=4368874772176927" action-type="feed_list_like" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:2,click:like,mid:4368874772176927,act:add"><i class="icon-act icon-act-praise"></i> <em>2</em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4368873618588385" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/1894353895?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:3,click:user_pic"><img src="https://tvax3.sinaimg.cn/crop.0.0.1002.1002.50/70e98be7ly8g1kn8h69wij20ru0ruabr.jpg?KID=imgbed,tva&Expires=1593811094&ssig=Ae5BbMKheQ" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4368873618588385&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/1894353895?refer_flag=1001030103_" class="name" target="_blank" nick-name="馬克斯考著晚餐吃什麼" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:3,click:user_name">馬克斯考著晚餐吃什麼</a>
+                        
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="馬克斯考著晚餐吃什麼">
+                    每小时耍<em class="s-color-red">特朗普</em>的<em class="s-color-red">推</em><em class="s-color-red">特</em>。 <a href="http://t.cn/EoZXZDQ"  target="_blank"><i class="wbicon">O</i>靠什么指标来判断牛市高点?</a> ​                </p>
+                                                <!--card解析-->
+<!--问答-->
+<div class="media media-article-a">
+    <div class="thumbnail">
+        <a href="https://weibo.com/p/2313474368563770121318">
+                        <img src="//wx2.sinaimg.cn/large/72cbf277ly1g2qbq2zbr4j20dw08ht8s.jpg" alt="" title="靠什么指标来判断牛市高点?">
+                    </a>
+        <i class="icon-doubt"></i>
+        <!-- 专属角标-->
+                <!-- 悬赏角标-->
+                <!-- 公益角标 -->
+                
+    </div>
+    <div class="media-info">
+        <h4><a href="https://weibo.com/p/2313474368563770121318" target="_blank">靠什么指标来判断牛市高点?</a></h4>
+        <p>
+        <em>25</em>个回答        <a href="https://weibo.com/p/2313474368563770121318" class="s-btn-d s-fr" target="_blank">回答</a>                                </p>
+    </div>
+</div>
+<!--/问答-->
+
+
+<!--/card解析-->
+                                <p class="from" >
+                                            <a href="//weibo.com/1894353895/HsTItA2el?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:3,click:wb_time">
+                        2019年05月06日 08:55
+                        </a>
+                                         &nbsp;来自 <a href="//app.weibo.com/t/feed/4VeZcq" rel="nofollow">小米8 SE</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="feed_list_favorite" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:3,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4368873618588385&name=馬克斯考著晚餐吃什麼&uid=1894353895&suda-data=key%3Dtblog_search_weibo%26value%3Dseqid%3A159380029445301819372%7Ctype%3A1%7Ct%3A0%7Cpos%3A1-0%7Cq%3A%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE%2520%25E6%258E%25A8%25E7%2589%25B9%7Cext%3Acate%3A31%2Cclick:do_repost,mid:4368873618588385" action-type="feed_list_forward" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:3,click:repost,mid:4368873618588385"> 转发 </a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:3,click:comment" action-type="feed_list_comment">评论 </a></li>
+                                                                <li><a title="赞" action-data="mid=4368873618588385" action-type="feed_list_like" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:3,click:like,mid:4368873618588385,act:add"><i class="icon-act icon-act-praise"></i> <em>1</em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4368873484509869" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/1674690860?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:4,click:user_pic"><img src="https://tva1.sinaimg.cn/crop.0.0.589.589.50/63d1c12cgw1ewraofvtmqj20gf0gidjv.jpg?KID=imgbed,tva&Expires=1593811094&ssig=AHiYgv5%2BZi" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4368873484509869&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/1674690860?refer_flag=1001030103_" class="name" target="_blank" nick-name="juprofashimi" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:4,click:user_name">juprofashimi</a>
+                        
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="juprofashimi">
+                    没人在意么，美金现汇买入价暴涨到6.77了，昨天才6.72啊！<em class="s-color-red">特朗普</em>两条<em class="s-color-red">推</em><em class="s-color-red">特</em>就让RMB暴跌啊 ​                </p>
+                                                <p class="from" >
+                                            <a href="//weibo.com/1674690860/HsTIgiVdP?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:4,click:wb_time">
+                        2019年05月06日 08:54
+                        </a>
+                                         &nbsp;来自 <a href="//app.weibo.com/t/feed/6vtZb0" rel="nofollow">微博 weibo.com</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="feed_list_favorite" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:4,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4368873484509869&name=juprofashimi&uid=1674690860&suda-data=key%3Dtblog_search_weibo%26value%3Dseqid%3A159380029445301819372%7Ctype%3A1%7Ct%3A0%7Cpos%3A1-0%7Cq%3A%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE%2520%25E6%258E%25A8%25E7%2589%25B9%7Cext%3Acate%3A31%2Cclick:do_repost,mid:4368873484509869" action-type="feed_list_forward" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:4,click:repost,mid:4368873484509869"> 转发 </a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:4,click:comment" action-type="feed_list_comment">评论 2</a></li>
+                                                                <li><a title="赞" action-data="mid=4368873484509869" action-type="feed_list_like" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:4,click:like,mid:4368873484509869,act:add"><i class="icon-act icon-act-praise"></i> <em>1</em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4368873349927717" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/6666414726?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:5,click:user_pic"><img src="https://tvax1.sinaimg.cn/crop.25.0.138.138.50/007h9B0aly8fupjk0udtpj304u040jrq.jpg?KID=imgbed,tva&Expires=1593811094&ssig=sSoi8sXev3" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4368873349927717&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/6666414726?refer_flag=1001030103_" class="name" target="_blank" nick-name="凤凰通讯社杭州站" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:5,click:user_name">凤凰通讯社杭州站</a>
+                        <a href="//verified.weibo.com/verify" target="_blank"  title="微博官方认证"><i class="icon-vip icon-vip-b"></i></a>
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="凤凰通讯社杭州站">
+                    5月6日（周一），秘书处为您提供今日新闻摘要，供您参考！<br/><br/>1、环球社评：新疆治理下一个焦点，让稳定长期化。（详见：<a href="http://t.cn/EoLkqWL"  target="_blank"><i class="wbicon">O</i>网页链接</a>）<br/>2、挑动与中国“文明较量”？美国务院官员“蠢”起来连盟友都怕。<br/>3、俄航客机紧急降落时起火41人遇难，媒体：或因被闪电击中起火。<br/>4、脸书封杀极右翼账号， ​  <a href="//weibo.com/6666414726/HsTI2FEEt?refer_flag=1001030103_" action-type="fl_unfold" target="_blank">展开全文<i class="wbicon">c</i></a>                </p>
+                                <p class="txt" node-type="feed_list_content_full" nick-name="凤凰通讯社杭州站" style="display: none">
+                    5月6日（周一），秘书处为您提供今日新闻摘要，供您参考！<br/><br/>1、环球社评：新疆治理下一个焦点，让稳定长期化。（详见：<a href="http://t.cn/EoLkqWL"  target="_blank"><i class="wbicon">O</i>网页链接</a>）<br/>2、挑动与中国“文明较量”？美国务院官员“蠢”起来连盟友都怕。<br/>3、俄航客机紧急降落时起火41人遇难，媒体：或因被闪电击中起火。<br/>4、脸书封杀极右翼账号，<em class="s-color-red">特朗普</em>发起“<em class="s-color-red">推</em><em class="s-color-red">特</em>风暴”：我将紧盯你们。<br/>5、巴以“激烈交火”引发地区紧张，超250万以色列百姓躲进防空洞。<br/>6、印尼“击沉”51艘“非法捕鱼”外国渔船，多半来自越南。<br/>7、伊朗官员：面对“非法”制裁，伊朗将在“灰色市场”出售石油。<br/>8、东京证交所携手地方银行，拟每年扶持百家企业上市。<br/>9、中共中央国务院：建立集体经营性建设用地入市制度。<br/>10、人民日报：这个“五一”亮点多，消费升级 供需两旺。（详见：<a href="http://t.cn/Eo4WJ6T"  target="_blank"><i class="wbicon">O</i>这个“五一”亮点多：消费升级 供需两旺</a>）<br/>11、中国官方：到2022年城乡融合发展体制机制初步建立。<br/>12、一季度经济开局平稳稳中有进，服务业增加值同比增7%。<br/>13、一图读懂《政府投资条例》（附权威答问）。（详见：<a href="http://t.cn/Eo4WJ6j"  target="_blank"><i class="wbicon">O</i>一图读懂《政府投资条例》（附权威答问）</a>）<br/>14、央行：4月对金融机构开展中期借贷便利操作共2000亿。<br/>15、水利部启动建设项目节水评价，从严叫停不通过项目。<br/>16、动车禁止延长补票？铁路客服：未接到相关通知。<br/>17、广东治理“高考移民”：5月10日前排查外省转入学生。<br/>18、深圳楼市重新火爆成交量创新高，专家：因大湾区远景。<br/>19、华为正与高通谈判专利和解，或将每年付5亿美元专利费。<br/><br/>★今日分享:  ​​凡事最好做到三个字，想得开。想，就是能思考。得，就是有收获。开，就是会开心。做到这三个字，很多事就不是事了。 ——刘同 ​​ <a href="javascript:void(0);" action-type="fl_fold">收起全文<i class="wbicon">d</i></a>
+                </p>
+                                                <!--card解析-->
+<!--webpage解析 -->
+<!--微博红包-->
+<!--外链文章-->
+<div class="media media-item-a">
+    <div class="pic">
+        <a href="https://finance.sina.com.cn/roll/2019-05-06/doc-ihvhiqax6845419.shtml" target="_blank">
+            <img src="//n.sinaimg.cn/finance/transform/42/w400h442/20190506/966a-hwfpcxp2327999.jpg" onerror="javascript:this.src='//img.t.sinajs.cn/t6/style/images/face/face_card_wb.png'"  alt="这个“五一”亮点多：消费升级 供需两旺" title="这个“五一”亮点多：消费升级 供需两旺" />
+        </a>
+    </div>
+    <div class="info">
+        <a href="https://finance.sina.com.cn/roll/2019-05-06/doc-ihvhiqax6845419.shtml" target="_blank">
+            <h4>这个“五一”亮点多：消费升级 供需两旺</h4>
+            <p>这个“五一”亮点多—— 消费升级 供需两旺（经济新方位）制图：郭 祥 数据来源：美团点评、灯塔专业版 ■在“五一”餐饮消费成绩单中，夜间餐饮消费尤为亮眼，供需两旺...</p>
+        </a>
+        <!--<a href="#" class="s-btn-c s-fr"><i class="wbicon s-color-a">+</i> 关注</a>-->
+    </div>
+</div>
+<!--/外链文章-->
+
+
+<!--/card解析-->
+                                <p class="from" >
+                                            <a href="//weibo.com/6666414726/HsTI2FEEt?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:5,click:wb_time">
+                        2019年05月06日 08:54
+                        </a>
+                                         &nbsp;来自 <a href="//app.weibo.com/t/feed/5q6DIx" rel="nofollow">荣耀7X 全面屏手机</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="feed_list_favorite" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:5,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4368873349927717&name=凤凰通讯社杭州站&uid=6666414726&suda-data=key%3Dtblog_search_weibo%26value%3Dseqid%3A159380029445301819372%7Ctype%3A1%7Ct%3A0%7Cpos%3A1-0%7Cq%3A%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE%2520%25E6%258E%25A8%25E7%2589%25B9%7Cext%3Acate%3A31%2Cclick:do_repost,mid:4368873349927717" action-type="feed_list_forward" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:5,click:repost,mid:4368873349927717"> 转发 </a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:5,click:comment" action-type="feed_list_comment">评论 </a></li>
+                                                                <li><a title="赞" action-data="mid=4368873349927717" action-type="feed_list_like" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:5,click:like,mid:4368873349927717,act:add"><i class="icon-act icon-act-praise"></i> <em>1</em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4368872134398449" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/6437839626?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:6,click:user_pic"><img src="https://tvax3.sinaimg.cn/crop.530.0.666.666.50/0071Gwb0ly8g8og7p1706j30xc0kyk9w.jpg?KID=imgbed,tva&Expires=1593811094&ssig=sf3QVZMjOp" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4368872134398449&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/6437839626?refer_flag=1001030103_" class="name" target="_blank" nick-name="城西股事" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:6,click:user_name">城西股事</a>
+                        
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="城西股事">
+                    今日全球避险资产亚洲开盘大涨，道指期货跌逾400点，标普500期指跌1.6%。WTI原油期货周一早盘跳空低开2%以上。现货黄金、白银短线拉升。跟<em class="s-color-red">特朗普</em><em class="s-color-red">推</em><em class="s-color-red">特</em>内容也有很大的关系！ ​                </p>
+                                                <p class="from" >
+                                            <a href="//weibo.com/6437839626/HsTG5iseJ?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:6,click:wb_time">
+                        2019年05月06日 08:49
+                        </a>
+                                         &nbsp;来自 <a href="//app.weibo.com/t/feed/1tqBja" rel="nofollow">360安全浏览器</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="feed_list_favorite" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:6,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4368872134398449&name=城西股事&uid=6437839626&suda-data=key%3Dtblog_search_weibo%26value%3Dseqid%3A159380029445301819372%7Ctype%3A1%7Ct%3A0%7Cpos%3A1-0%7Cq%3A%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE%2520%25E6%258E%25A8%25E7%2589%25B9%7Cext%3Acate%3A31%2Cclick:do_repost,mid:4368872134398449" action-type="feed_list_forward" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:6,click:repost,mid:4368872134398449"> 转发 </a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:6,click:comment" action-type="feed_list_comment">评论 </a></li>
+                                                                <li><a title="赞" action-data="mid=4368872134398449" action-type="feed_list_like" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:6,click:like,mid:4368872134398449,act:add"><i class="icon-act icon-act-praise"></i> <em></em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4368872058913533" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/1509031097?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:7,click:user_pic"><img src="https://tvax2.sinaimg.cn/crop.0.0.1002.1002.50/59f1fcb9ly8g3165efs9gj20ru0ruaaq.jpg?KID=imgbed,tva&Expires=1593811094&ssig=RqIDJmGcHT" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4368872058913533&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/1509031097?refer_flag=1001030103_" class="name" target="_blank" nick-name="韭菜帮帮主--张兴成" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:7,click:user_name">韭菜帮帮主--张兴成</a>
+                        <a href="//verified.weibo.com/verify" target="_blank"   title="微博个人认证"><i class="icon-vip icon-vip-y"></i></a>
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="韭菜帮帮主--张兴成">
+                    今日全球避险资产亚洲开盘大涨，道指期货跌逾400点，标普500期指跌1.6%。WTI原油期货周一早盘跳空低开2%以上。现货黄金、白银短线拉升。跟<em class="s-color-red">特朗普</em><em class="s-color-red">推</em><em class="s-color-red">特</em>内容也有很大的关系！ ​                </p>
+                                                <p class="from" >
+                                            <a href="//weibo.com/1509031097/HsTFXBoOF?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:7,click:wb_time">
+                        2019年05月06日 08:48
+                        </a>
+                                         &nbsp;来自 <a href="//app.weibo.com/t/feed/6vtZb0" rel="nofollow">微博 weibo.com</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="feed_list_favorite" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:7,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4368872058913533&name=韭菜帮帮主--张兴成&uid=1509031097&suda-data=key%3Dtblog_search_weibo%26value%3Dseqid%3A159380029445301819372%7Ctype%3A1%7Ct%3A0%7Cpos%3A1-0%7Cq%3A%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE%2520%25E6%258E%25A8%25E7%2589%25B9%7Cext%3Acate%3A31%2Cclick:do_repost,mid:4368872058913533" action-type="feed_list_forward" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:7,click:repost,mid:4368872058913533"> 转发 </a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:7,click:comment" action-type="feed_list_comment">评论 </a></li>
+                                                                <li><a title="赞" action-data="mid=4368872058913533" action-type="feed_list_like" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:7,click:like,mid:4368872058913533,act:add"><i class="icon-act icon-act-praise"></i> <em></em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4368871501300839" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/6437839626?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:8,click:user_pic"><img src="https://tvax3.sinaimg.cn/crop.530.0.666.666.50/0071Gwb0ly8g8og7p1706j30xc0kyk9w.jpg?KID=imgbed,tva&Expires=1593811094&ssig=sf3QVZMjOp" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4368871501300839&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/6437839626?refer_flag=1001030103_" class="name" target="_blank" nick-name="城西股事" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:8,click:user_name">城西股事</a>
+                        
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="城西股事">
+                    <em class="s-color-red">特朗普</em>又发<em class="s-color-red">推</em><em class="s-color-red">特</em>了，催促中美贸易谈判，这个消息预计会对A股产生较的波动！ ​                </p>
+                                                <!--card解析-->
+<div node-type="feed_list_media_prev">
+    <div class="media media-piclist" node-type="fl_pic_list" action-data="uid=6437839626&mid=4368871501300839&pic_ids=0071Gwb0ly1g2rb1jber6j30fu0urad1">
+                                                            <ul class="m1 h1 c1">
+                                                                                                                                    <li><img src="//ww3.sinaimg.cn/orj360/0071Gwb0ly1g2rb1jber6j30fu0urad1.jpg" action-data="uid=6437839626&pic_id=0071Gwb0ly1g2rb1jber6j30fu0urad1" action-type="fl_pics" suda-data="key=tblog_search_weibo&value=weibo_ss_1_pic"></li>
+                                                </ul>
+    </div>
+</div>
+<div node-type="feed_list_media_disp">
+</div>
+
+
+<!--/card解析-->
+                                <p class="from" >
+                                            <a href="//weibo.com/6437839626/HsTF45sph?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:8,click:wb_time">
+                        2019年05月06日 08:46
+                        </a>
+                                         &nbsp;来自 <a href="//app.weibo.com/t/feed/6vtZb0" rel="nofollow">微博 weibo.com</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="feed_list_favorite" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:8,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4368871501300839&name=城西股事&uid=6437839626&suda-data=key%3Dtblog_search_weibo%26value%3Dseqid%3A159380029445301819372%7Ctype%3A1%7Ct%3A0%7Cpos%3A1-0%7Cq%3A%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE%2520%25E6%258E%25A8%25E7%2589%25B9%7Cext%3Acate%3A31%2Cclick:do_repost,mid:4368871501300839" action-type="feed_list_forward" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:8,click:repost,mid:4368871501300839"> 转发 </a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:8,click:comment" action-type="feed_list_comment">评论 </a></li>
+                                                                <li><a title="赞" action-data="mid=4368871501300839" action-type="feed_list_like" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:8,click:like,mid:4368871501300839,act:add"><i class="icon-act icon-act-praise"></i> <em></em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4368871475198058" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/1509031097?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:9,click:user_pic"><img src="https://tvax2.sinaimg.cn/crop.0.0.1002.1002.50/59f1fcb9ly8g3165efs9gj20ru0ruaaq.jpg?KID=imgbed,tva&Expires=1593811094&ssig=RqIDJmGcHT" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4368871475198058&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/1509031097?refer_flag=1001030103_" class="name" target="_blank" nick-name="韭菜帮帮主--张兴成" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:9,click:user_name">韭菜帮帮主--张兴成</a>
+                        <a href="//verified.weibo.com/verify" target="_blank"   title="微博个人认证"><i class="icon-vip icon-vip-y"></i></a>
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="韭菜帮帮主--张兴成">
+                    <em class="s-color-red">特朗普</em>又发<em class="s-color-red">推</em><em class="s-color-red">特</em>了，催促中美贸易谈判，这个消息预计会对A股产生较的波动！ ​                </p>
+                                                <!--card解析-->
+<div node-type="feed_list_media_prev">
+    <div class="media media-piclist" node-type="fl_pic_list" action-data="uid=1509031097&mid=4368871475198058&pic_ids=59f1fcb9ly1g2rb16lhmaj20fu0urad1">
+                                                            <ul class="m1 h1 c1">
+                                                                                                                                    <li><img src="//ww1.sinaimg.cn/orj360/59f1fcb9ly1g2rb16lhmaj20fu0urad1.jpg" action-data="uid=1509031097&pic_id=59f1fcb9ly1g2rb16lhmaj20fu0urad1" action-type="fl_pics" suda-data="key=tblog_search_weibo&value=weibo_ss_1_pic"></li>
+                                                </ul>
+    </div>
+</div>
+<div node-type="feed_list_media_disp">
+</div>
+
+
+<!--/card解析-->
+                                <p class="from" >
+                                            <a href="//weibo.com/1509031097/HsTF1lOfE?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:9,click:wb_time">
+                        2019年05月06日 08:46
+                        </a>
+                                         &nbsp;来自 <a href="//app.weibo.com/t/feed/6vtZb0" rel="nofollow">微博 weibo.com</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="feed_list_favorite" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:9,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4368871475198058&name=韭菜帮帮主--张兴成&uid=1509031097&suda-data=key%3Dtblog_search_weibo%26value%3Dseqid%3A159380029445301819372%7Ctype%3A1%7Ct%3A0%7Cpos%3A1-0%7Cq%3A%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE%2520%25E6%258E%25A8%25E7%2589%25B9%7Cext%3Acate%3A31%2Cclick:do_repost,mid:4368871475198058" action-type="feed_list_forward" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:9,click:repost,mid:4368871475198058"> 转发 </a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:9,click:comment" action-type="feed_list_comment">评论 </a></li>
+                                                                <li><a title="赞" action-data="mid=4368871475198058" action-type="feed_list_like" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:9,click:like,mid:4368871475198058,act:add"><i class="icon-act icon-act-praise"></i> <em></em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4368870284022813" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/1994323532?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:10,click:user_pic"><img src="https://tva4.sinaimg.cn/crop.0.0.180.180.50/76def64cjw1e8qgp5bmzyj2050050aa8.jpg?KID=imgbed,tva&Expires=1593811094&ssig=zgbcxWDiqu" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4368870284022813&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/1994323532?refer_flag=1001030103_" class="name" target="_blank" nick-name="火锅德鲁伊" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:10,click:user_name">火锅德鲁伊</a>
+                        <a href="//vip.weibo.com" target="_blank" title="微博会员"><i class="icon-vip icon-member"></i></a>
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="火锅德鲁伊">
+                    不用组织动手，我自己删<em class="s-color-red">特朗普</em>的<em class="s-color-red">推</em><em class="s-color-red">特</em>图<img src="//img.t.sinajs.cn/t4/appstyle/expression/ext/normal/83/2018new_kuxiao_org.png" title="[允悲]" alt="[允悲]" class="face" /><img src="//img.t.sinajs.cn/t4/appstyle/expression/ext/normal/83/2018new_kuxiao_org.png" title="[允悲]" alt="[允悲]" class="face" /><img src="//img.t.sinajs.cn/t4/appstyle/expression/ext/normal/83/2018new_kuxiao_org.png" title="[允悲]" alt="[允悲]" class="face" /> ​                </p>
+                                                <p class="from" >
+                                            <a href="//weibo.com/1994323532/HsTD6gSw5?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:10,click:wb_time">
+                        2019年05月06日 08:41
+                        </a>
+                                         &nbsp;来自 <a href="//app.weibo.com/t/feed/5yiHuw" rel="nofollow">iPhone 6 Plus</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="feed_list_favorite" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:10,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4368870284022813&name=火锅德鲁伊&uid=1994323532&suda-data=key%3Dtblog_search_weibo%26value%3Dseqid%3A159380029445301819372%7Ctype%3A1%7Ct%3A0%7Cpos%3A1-0%7Cq%3A%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE%2520%25E6%258E%25A8%25E7%2589%25B9%7Cext%3Acate%3A31%2Cclick:do_repost,mid:4368870284022813" action-type="feed_list_forward" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:10,click:repost,mid:4368870284022813"> 转发 </a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:10,click:comment" action-type="feed_list_comment">评论 </a></li>
+                                                                <li><a title="赞" action-data="mid=4368870284022813" action-type="feed_list_like" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:10,click:like,mid:4368870284022813,act:add"><i class="icon-act icon-act-praise"></i> <em>3</em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--card-wrap-->
+<div class="card-wrap" action-type="feed_list_item" mid="4368869617174822" >
+        <div class="card" >
+        <div class="card-feed">
+            <div class="avator">
+                <a href="//weibo.com/5849113841?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:11,click:user_pic"><img src="https://tvax3.sinaimg.cn/crop.0.0.750.750.50/006nQhHPly8fxnlwph2a9j30ku0kut9p.jpg?KID=imgbed,tva&Expires=1593811094&ssig=kEDRZQsJZt" /></a>
+            </div>
+            <!--微博内容-->
+            <div class="content" node-type="like">
+                <div class="info">
+                    <div class="menu s-fr">
+                        <a href="javascript:void(0);" action-type="fl_menu"><i class="wbicon">c</i></a>
+                        <ul node-type="fl_menu_right" style="display:none;">
+                            <li><a href="javascript:void(0);" onclick="javascript:window.open('//service.account.weibo.com/reportspam?rid=4368869617174822&amp;type=1&amp;from=10501&amp;url=&amp;bottomnav=1&amp;wvr=6', 'newwindow', 'height=700, width=550, toolbar =yes, menubar=no, scrollbars=yes, resizable=yes, location=no, status=no');">投诉</a></li>
+                                                    </ul>
+                    </div>
+                    <div>
+                        <a href="//weibo.com/5849113841?refer_flag=1001030103_" class="name" target="_blank" nick-name="蚂蚁搬金周进文" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:11,click:user_name">蚂蚁搬金周进文</a>
+                        <a href="//verified.weibo.com/verify" target="_blank"   title="微博个人认证"><i class="icon-vip icon-vip-y"></i></a>
+                        <!--广告微博加关注按钮 -->
+                                            </div>
+                </div>
+                <p class="txt" node-type="feed_list_content" nick-name="蚂蚁搬金周进文">
+                    5.6操盘策略：节日期间平稳为主，昨晚<em class="s-color-red">特朗普</em>的<em class="s-color-red">推</em><em class="s-color-red">特</em>又给贸易战摩擦来了一些不确定的因素，这是最大的一个不确定因素；节前个股密集地雷，现在是不可能了，所以大规模杀跌可能性为0。垃圾股，业绩预减股，违法之类的个股，基本上日子会很难很难，不排除退市，大家要远离。技术上看，沪指缩量止跌企稳后， ​  <a href="//weibo.com/5849113841/HsTC1u6uW?refer_flag=1001030103_" action-type="fl_unfold" target="_blank">展开全文<i class="wbicon">c</i></a>                </p>
+                                <p class="txt" node-type="feed_list_content_full" nick-name="蚂蚁搬金周进文" style="display: none">
+                    5.6操盘策略：节日期间平稳为主，昨晚<em class="s-color-red">特朗普</em>的<em class="s-color-red">推</em><em class="s-color-red">特</em>又给贸易战摩擦来了一些不确定的因素，这是最大的一个不确定因素；节前个股密集地雷，现在是不可能了，所以大规模杀跌可能性为0。垃圾股，业绩预减股，违法之类的个股，基本上日子会很难很难，不排除退市，大家要远离。技术上看，沪指缩量止跌企稳后，震荡往上大概率事件，操作上，绩优股，底部股滚动操作！ <a href="javascript:void(0);" action-type="fl_fold">收起全文<i class="wbicon">d</i></a>
+                </p>
+                                                <!--card解析-->
+<div node-type="feed_list_media_prev">
+    <div class="media media-piclist" node-type="fl_pic_list" action-data="uid=5849113841&mid=4368869617174822&pic_ids=006nQhHPly1g2rauskk7gj30i50bjt9f">
+                                            <ul class="m1 w1 c1">
+                                                                                                                    <li><img src="//ww1.sinaimg.cn/orj360/006nQhHPly1g2rauskk7gj30i50bjt9f.jpg" action-data="uid=5849113841&pic_id=006nQhHPly1g2rauskk7gj30i50bjt9f" action-type="fl_pics" suda-data="key=tblog_search_weibo&value=weibo_ss_1_pic"></li>
+                                                </ul>
+    </div>
+</div>
+<div node-type="feed_list_media_disp">
+</div>
+
+
+<!--/card解析-->
+                                <p class="from" >
+                                            <a href="//weibo.com/5849113841/HsTC1u6uW?refer_flag=1001030103_" target="_blank" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:11,click:wb_time">
+                        2019年05月06日 08:39
+                        </a>
+                                         &nbsp;来自 <a href="//app.weibo.com/t/feed/6vtZb0" rel="nofollow">微博 weibo.com</a>                </p>
+            </div>
+            <!--/微博内容-->
+        </div>
+        <div class="card-act">
+            <ul>
+                <li><a href="javascript:void(0);" action-type="feed_list_favorite" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:11,click:fav">收藏</a></li>
+                                                                <li><a href="javascript:void(0);" action-data="allowForward=1&mid=4368869617174822&name=蚂蚁搬金周进文&uid=5849113841&suda-data=key%3Dtblog_search_weibo%26value%3Dseqid%3A159380029445301819372%7Ctype%3A1%7Ct%3A0%7Cpos%3A1-0%7Cq%3A%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE%2520%25E6%258E%25A8%25E7%2589%25B9%7Cext%3Acate%3A31%2Cclick:do_repost,mid:4368869617174822" action-type="feed_list_forward" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:11,click:repost,mid:4368869617174822"> 转发 </a></li>
+                                <li><a href="javascript:void(0);" action-data="pageid=weibo&amp;suda-data=key%3Dtblog_search_weibo%26value%3Dweibo_h_1_p_p" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:11,click:comment" action-type="feed_list_comment">评论 </a></li>
+                                                                <li><a title="赞" action-data="mid=4368869617174822" action-type="feed_list_like" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,mpos:11,click:like,mid:4368869617174822,act:add"><i class="icon-act icon-act-praise"></i> <em>1</em></a></li>
+            </ul>
+        </div>
+        <div node-type="feed_list_repeat"></div>
+            </div>
+</div>
+<!--/card-wrap-->
+<!--/微博card-->
+
+                                                            </div>
+                <!--/cate流-->
+                                <!--翻页-->
+<div class="m-page">
+    <div>
+                    <span class="list">
+                <a href="javascript:void(0);" class="pagenum" action-type="feed_list_page_more">第1页 <i class="wbicon">c</i></a>
+                <ul class="s-scroll" style="display: none;" node-type="feed_list_page_morelist" action-type="feed_list_page_morelist">
+                                                            <li class="cur"><a href="/weibo/%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE?q=%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9&typeall=1&suball=1&timescope=custom:2019-05-06-0:2019-05-06-9&Refer=g&page=1">第1页</a></li>
+                                                                                <li><a href="/weibo/%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE?q=%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9&typeall=1&suball=1&timescope=custom:2019-05-06-0:2019-05-06-9&Refer=g&page=2">第2页</a></li>
+                                                                                <li><a href="/weibo/%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE?q=%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9&typeall=1&suball=1&timescope=custom:2019-05-06-0:2019-05-06-9&Refer=g&page=3">第3页</a></li>
+                                                                                <li><a href="/weibo/%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE?q=%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9&typeall=1&suball=1&timescope=custom:2019-05-06-0:2019-05-06-9&Refer=g&page=4">第4页</a></li>
+                                                        </ul>
+            </span>
+                <a href="/weibo/%25E7%2589%25B9%25E6%259C%2597%25E6%2599%25AE?q=%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9&typeall=1&suball=1&timescope=custom:2019-05-06-0:2019-05-06-9&Refer=g&page=2" class="next">下一页</a>
+            </div>
+</div>
+<!--/翻页-->
+
+            </div>
+
+            <div class="m-con-r">
+                <!--话题右侧流加载-->
+                                <!--热搜榜-->
+<div class="card-wrap" id="pl_band_index">
+    <div class="card card-hotrank">
+        <div class="card-head">
+            <a href="/top/summary?cate=realtimehot" target="_blank" class="more s-fr">更多 <i class="wbicon">a</i></a>
+            <h4 class="title">热搜榜</h4>
+        </div>
+        <div class="card-content s-pg16">
+            <ul>
+                                <li>
+                    <i class="num icon-top"></i>
+                    <p>
+                        <a href="/weibo?q=%23%E6%88%91%E5%9B%BD%E6%88%90%E5%8A%9F%E5%8F%91%E5%B0%84%E9%AB%98%E5%88%86%E5%A4%9A%E6%A8%A1%E5%8D%AB%E6%98%9F%23&Refer=new_time&Refer=newtime">我国成功发射高分多模卫星</a>
+                        <i class="icon-txt icon-txt-hot">热</i>
+                    </p>
+                </li>
+                                                <li>
+                    <span class="num top">1</span>
+                    <p>
+                        <span class="val">69万</span>
+                                                <a href="/weibo?q=%23%E9%BB%84%E5%9C%A3%E4%BE%9D%E7%9C%8B%E4%BC%8A%E8%83%BD%E9%9D%99%E7%9A%84%E8%A1%A8%E6%83%85%23&Refer=top">黄圣依看伊能静的表情</a>
+                                                <i class="icon-txt icon-txt-boil">沸</i>
+                    </p>
+                </li>
+                                <li>
+                    <span class="num top">2</span>
+                    <p>
+                        <span class="val">60万</span>
+                                                <a href="/weibo?q=%23%E5%B9%BC%E5%84%BF%E5%9B%AD%E8%80%81%E5%B8%88%E5%B8%A6176%E5%90%8D%E5%AD%A9%E5%AD%9017%E7%A7%92%E6%92%A4%E7%A6%BB%23&Refer=top">幼儿园老师带176名孩子17秒撤离</a>
+                                                
+                    </p>
+                </li>
+                                <li>
+                    <span class="num top">3</span>
+                    <p>
+                        <span class="val">58万</span>
+                                                                        <a href_to="/weibo?q=%23%E5%86%B2%E6%B5%AA%E5%90%A7%E5%A7%90%E5%A7%90%23&topic_ad=1&Refer=top" href="javascript:void(0);" suda-data="key=tblog_search_weibo&value=seqid:159380029445301819372|type:1|t:0|pos:1-0|q:%E7%89%B9%E6%9C%97%E6%99%AE%20%E6%8E%A8%E7%89%B9|ext:cate:31,click:ad_hotword_index,adid:88978" action-data="ad_id=88978&num=3&type=C2S&cate=PC_realtime" action-type="realtimehot_ad" word="冲浪吧姐姐" url_show="https%3A%2F%2Fxlwb.365dmp.com%2Fvw%3Fidfa%3D__IDFA__%26imei%3D__IMEI__%26mac%3D__MAC__%26androidid%3D__ANDROIDID__%26info%3DCBEQFBgRIgAo7rYDMKABONG7BUCHPUoDMTYwUgBaAGj%252F9qn6BXIAegCAAT6IARQ%253D" url_click="https%3A%2F%2Fxlwb.365dmp.com%2Fck%3Fidfa%3D__IDFA__%26imei%3D__IMEI__%26mac%3D__MAC__%26androidid%3D__ANDROIDID__%26info%3DCBEQFBgRIgAo7rYDMKABONG7BUCHPUoDMTYwUgBaAGj%252F9qn6BXIAegCAAT6IARQ%253D%26landingpage%3D" url2_show="" url2_click="">冲浪吧姐姐</a>
+                                                <i class="icon-txt icon-txt-recommend">荐</i>
+                    </p>
+                </li>
+                                <li>
+                    <span class="num top">4</span>
+                    <p>
+                        <span class="val">55万</span>
+                                                <a href="/weibo?q=%23%E5%A5%94%E8%B7%91%E5%90%A7%E8%BF%99%E6%9C%9F%E4%B8%BB%E9%A2%98%E7%9C%9F%E7%9A%84%E5%A5%BD%23&Refer=top">奔跑吧这期主题真的好</a>
+                                                <i class="icon-txt icon-txt-boil">沸</i>
+                    </p>
+                </li>
+                                <li>
+                    <span class="num top">5</span>
+                    <p>
+                        <span class="val">49万</span>
+                                                <a href="/weibo?q=%23%E8%93%9D%E7%9B%88%E8%8E%B9%E5%A5%BD%E8%83%9C%E5%BF%83%23&Refer=top">蓝盈莹好胜心</a>
+                                                <i class="icon-txt icon-txt-boil">沸</i>
+                    </p>
+                </li>
+                                <li>
+                    <span class="num top">6</span>
+                    <p>
+                        <span class="val">32万</span>
+                                                <a href="/weibo?q=%23%E5%AD%9F%E4%BD%B3%E7%BB%84%E5%A4%AA%E6%83%A8%E4%BA%86%23&Refer=top">孟佳组太惨了</a>
+                                                
+                    </p>
+                </li>
+                                <li>
+                    <span class="num top">7</span>
+                    <p>
+                        <span class="val">26万</span>
+                                                <a href="/weibo?q=%E5%90%91%E5%BE%80%E7%9A%84%E7%94%9F%E6%B4%BB&Refer=top">向往的生活</a>
+                                                
+                    </p>
+                </li>
+                                <li>
+                    <span class="num top">8</span>
+                    <p>
+                        <span class="val">25万</span>
+                                                <a href="/weibo?q=%23%E5%BD%93%E5%BD%93%E7%BD%91%E7%94%B7%E5%91%98%E5%B7%A5%E5%8F%98%E6%80%A7%E4%BB%A5%E6%97%B7%E5%B7%A5%E8%A2%AB%E8%A7%A3%E9%9B%87%23&Refer=top">当当网男员工变性以旷工被解雇</a>
+                                                
+                    </p>
+                </li>
+                                <li>
+                    <span class="num top">9</span>
+                    <p>
+                        <span class="val">21万</span>
+                                                <a href="/weibo?q=%23%E6%8B%8D%E4%B8%80%E6%8B%8D%23&Refer=top">拍一拍</a>
+                                                
+                    </p>
+                </li>
+                                <li>
+                    <span class="num top">10</span>
+                    <p>
+                        <span class="val">19万</span>
+                                                <a href="/weibo?q=%23%E6%B8%AF%E7%8B%AC%E5%A4%B4%E7%9B%AE%E7%BD%97%E5%86%A0%E8%81%AA%E6%89%BF%E8%AE%A4%E9%80%83%E7%A6%BB%E9%A6%99%E6%B8%AF%23&Refer=top">港独头目罗冠聪承认逃离香港</a>
+                                                
+                    </p>
+                </li>
+                            </ul>
+        </div>
+    </div>
+</div>
+<!--热搜榜-->
+
+<!--广告-->
+<div class="card-wrap">
+    <div class="card card-film">
+        <div class="card-head">
+            <h4 class="title">广告</h4>
+        </div>
+        <div class="card-content">
+            <iframe src="//j.s.weibo.com/widget.html?t=1593800294737297999" style="width:300px; height:250px;" border="0" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"></iframe>
+        </div>
+    </div>
+</div>
+<!--/广告-->
+<!--搜索历史-->
+<div class="card-wrap">
+    <div class="card card-history" id="pl_history_index">
+    </div>
+</div>
+<!--/搜索历史-->
+                            </div>
+        </div>
+        <!--/内容-->
+    </div>
+    <script>
+        //连续的微博单独处理个微博之间的间隙问题
+        var sCates = document.querySelectorAll('.wrap-continuous');
+        if(sCates.length){
+            sCates[sCates.length-1].style.marginBottom = '10px';
+            sCates[0].style.borderBottom = '1px solid #eee';
+        }
+    </script>
+    <script type="text/javascript" charset="UTF-8" src="//js.t.sinajs.cn/t4/apps/searchpc/js/pc/js/conf/base.js?version=202006291410"></script>
+    <script type="text/javascript" charset="UTF-8" src="//js.t.sinajs.cn/t4/apps/searchpc/js/pc/js/conf/common.js?version=202006291410"></script>
+    <script type="text/javascript" charset="UTF-8" src="//js.t.sinajs.cn/t4/apps/searchpc/js/pc/js/conf/feed.js?version=202006291410"></script>
+    <script type="text/javascript" charset="UTF-8" src="//js.t.sinajs.cn/t4/apps/searchpc/js/pc/js/conf/weiboFeedList.js?version=202006291410"></script>
+</div>
+<!--脚部-->
+<div class="m-footer">
+    <div class="bottom">
+        <div class="m-outlink">
+            <div class="link">
+                <a href="http://ir.weibo.com/phoenix.zhtml?c=253076&p=irol-irhome" class="icon-wb" target="_blank" title="关于微博">关于微博</a>
+                <a href="https://kefu.weibo.com/" target="_blank" title="微博帮助">微博帮助</a>
+                <a href="https://s.weibo.com/weibo?q=%23%E5%BE%AE%E5%BB%BA%E8%AE%AE%23&bottomnav=1&wvr=6" target="_blank" title="意见反馈">意见反馈</a>
+                <a href="http://open.weibo.com/?bottomnav=1&wvr=5" target="_blank" title="开放平台">开放平台</a>
+                <a href="http://hr.weibo.com/?bottomnav=1&wvr=5" target="_blank" title="微博招聘">微博招聘</a>
+                <a href="http://news.sina.com.cn/guide/?bottomnav=1&wvr=5" target="_blank" title="新浪网导航">新浪网导航</a>
+                <a href="http://service.account.weibo.com/?bottomnav=1&wvr=5&is_redirected=1" target="_blank" title="社区管理中心">社区管理中心</a>
+                <a href="http://service.account.weibo.com/roles/gongyue?bottomnav=1&wvr=5&is_redirected=1" target="_blank" title="微博社区公约">微博社区公约</a>
+            </div>
+            <p class="copyright">
+                Copyright © 2009-2020 WEIBO 北京微梦创科网络技术有限公司
+                <a href="https://weibo.com/aj/static/jww.html" target="_blank">京网文[2011]0398-130号</a>
+                <a href="http://www.miibeian.gov.cn" target="_blank" target="_blank">京ICP备12002058号</a>
+                <!-- <select id="pl_language_language">
+                    <option value="zh-cn" selected="selected">中文(简体)</option>
+                    <option value="zh-tw">中文(繁体)</option>
+                </select> -->
+                </span>
+            </p>
+        </div>
+    </div>      
+    <!-- <script src="https://js.t.sinajs.cn/t5/pack/static/musicplayer/musicplayer_stk_v6.1.5.js"></script> -->
+    <script>
+    // //设置用户uid 用于同步赞状态
+    // WEIBO_MUSIC_PLAYER.load({page_id:''});
+    // //监听赞事件
+    // //监听分享事件
+    // WEIBO_MUSIC_PLAYER.on('share', function (evt, song) {
+    //     alert(song.copy);
+    //     song //歌曲的所有信息      
+    // });
+    </script>
+
+
+</div>
+<!--脚部-->
+<!--回到顶部-->
+<div id="pl_common_scrollToTop">
+    <div class="m-gotop" node-type="scrollToTop" style="display: none;">
+        <a href="javascript:void(0);" class="wbicon" >Ú</a>
+    </div>
+</div>
+<!--/回到顶部-->
+
+<script src="//js.t.sinajs.cn/t6/home/js/pl/top/topInit.js"></script>
+<script type="text/javascript">
+    (function() {
+        WBtopGlobal && WBtopGlobal.init({
+            "name":"beibei2442",
+            "onick":"beibei2442",
+            "uid":"6980010397",
+            "lang":"en-us",
+            'islogin':1,
+            "backurl":"//s.weibo.com"
+        });
+    })();
+</script>
+<script type="text/javascript" charset="utf-8" async="" src="//js.t.sinajs.cn/open/analytics/js/suda.js?version=2018080418263900"></script>
+<!-- SUDA_CODE_START -->
+<noscript><img width="0" height="0" src="//beacon.sina.com.cn/a.gif?noScript" border="0" alt="" /></noscript>
+<!-- SUDA_CODE_END -->
+</body>
+<!-- video -->
+<!-- <script src="//js.t.sinajs.cn/t6/page/js/pl/third/search/index.js?version=2018073117" type="text/javascript"></script> -->
+
+</html>
