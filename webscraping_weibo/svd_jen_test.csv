@@ -1,0 +1,44 @@
+time,name,type,content,scoreXM,scoreSNOW,scoreAVG
+08月07日13:19,vanil,微博会员,"""CanIdoatimeheistonmylife?""瞬间泪目OnlyifIcan""solvetheeigenvaluesofaparticleusingsingularvaluedecompositiononaMobiusstrip""?It'scoolbutit'sgibberish,YO",0.9926777728798828,0.9722519999883029,0.9824648864340928
+07月02日15:28,Georg,微博个人,想请教做机器学习/数据科学方面的高手：我有一个矩阵含500条的时间序列（肩关节的角度变化），打算做singularvaluedecomposition，然后做一些后续的featureanalysis。SVD之前的meandeviatedshift的减掉平均值，这个平均值是应该怎样取？是要dimensionreduction更少？还是interpretable的原理来取平均时间序列值？,0.9999917782701643,0.9778100535233912,0.9889009158967778
+05月08日06:16,爱可可-爱,微博个人,用截断奇异值分解(SVD)做主成分分析(PCA)的数学和直觉《TheMathematicsandIntuitionsofPrincipalComponentAnalysis(PCA)UsingTruncatedSingularValueDecomposition(SVD)》by,0.9999991867572081,0.999666863300228,0.9998330250287181
+02月09日13:28,solox,微博普通,清早爬起来看eigendecomposition和singularvaluedecomposition，也是蛮认真的。想起来以前也看过，但是印象就没这么深刻，那时候觉得SVD就是我不可能理解的天书。知识果真是需要积累的​,0.8278907337271969,0.9939545134772767,0.9109226236022367
+11月26日16:10,"技术头条""",微博普通,谈谈SVD和,0.7039920740886424,0.3293418291102329,0.5166669515994377
+10月18日21:37,程序员的英,微博个人,人工智能相关术语中英文,0.6396205666245791,0.9621605705553883,0.8008905685899836
+09月12日08:55,电光与控制,微博官方,"学术研究严强强,等.一种改进奇异值分解降噪方法研究[J].电光与控制,2018,25(9):22-25.YANQQ,etal.ANoiseReductionMethodBasedonImprovedSingularValueDecomposition[J].ElectronicsOptics&Control,2018,25(9):22-25.​",0.999999924210198,0.983857586038568,0.9919287551243829
+09月09日05:30,爱可可-爱,微博个人,"《OptimalSparseSingularValueDecompositionforHigh-dimensionalHigh-orderData》AZhang,RHan[UniversityofWisconsin-Madison](2018)view:​",0.9870279886769326,0.5,0.7435139943384663
+01月22日16:16,正浴火_望,微博普通,SingularValueDecomposition（SVD）奇异值分解-CSDN博客​,0.9999853974399833,0.3702195460325812,0.6851024717362822
+09月14日19:42,AMine,微博官方,分享《Thesingularvaluedecomposition:Afundamentaltechniqueinmultivariatedataanalysis》奇异值分解（SVD）：一种用于多变量数据分析的基础技术来源：SASblog作者：RickWicklin​,0.9999925631675095,0.9995368564887052,0.9997647098281073
+09月14日16:12,max42,微博普通,SingularValueDecomposition​,0.7039920740886424,0.5,0.6019960370443211
+05月28日22:45,lzk06,微博普通,『SingularValueDecompositionPart1:Perspectiveson,0.5194051585761474,0.5,0.5097025792880737
+05月25日11:18,我亦画中女,微博会员,MAT,0.5717007660871727,0.5,0.5358503830435863
+05月03日15:54,等来等去才,微博普通,刚刚下载了豆丁文档:10-BiclusteringviaSparseSingularValueDecomposition​,0.8324874809608971,0.6181256055049353,0.7253065432329162
+01月15日05:02,Entan,微博未知,"asingularvaluedecompositiontruncationofthematrixproductoperatoractuallymakestheprogramslower,.Iguessthisisbecausethenumberofnon-zeroelementsintheMPOincreasesafterSVD,.​",0.8830417405369743,0.5,0.6915208702684872
+10月25日06:48,爱可可-爱,微博个人,幻灯:SparkM,0.7039920740886424,0.4737672181921908,0.5888796461404167
+07月14日19:45,熊猫彼得在,微博普通,奇异值的物理意义是什么？郑宁：矩阵的奇异值是一个数学意义上的概念，一般是由奇异值分解（SingularValueDecomposition，简称SVD分解）得到。如果要问奇异值表示什么物理意义，那么就必须考虑在不同的实际工程应用中…（分享自@知乎）​,0.999999999999611,0.9997967086068695,0.9998983543032403
+05月12日07:45,bluep,微博普通,奇异值分解（SingularValueDecomposition）。看着非常简单，但如果要求背下来自己表达，我觉得好难啊！decomposition一个词我就嫌麻烦了。​,0.2786301170264701,0.7120310550894512,0.49533058605796065
+02月02日17:25,young,微博普通,写的蛮好，增加了一些理解/奇异值分解（WeRecommendaSingularValueDecomposition）|火光摇曳​,0.9999823884386574,0.919630272523221,0.9598063304809392
+01月05日11:45,Cross,微博普通,其实你并不是真正的懂SVD。『奇异值分解（WeRecommendaSingularValueDecomposition）|火光摇曳』​,0.9999749009325656,0.5075422375193805,0.7537585692259731
+01月04日18:47,ivy_w,微博普通,今天就一直在鼓弄这个，很好的科普文『奇异值分解（WeRecommendaSingularValueDecomposition）|火光摇曳』​,0.999995400110091,0.9957570743861034,0.9978762372480972
+01月04日14:31,太阳骑士_,微博普通,感觉还是有点抽象了..奇异值分解（WeRecommendaSingularValueDecomposition）|火光摇曳​,0.9999948909595355,0.78313559845349,0.8915652447065128
+01月04日12:08,火光摇曳F,微博普通,奇异值分解（WeRecommendaSingularValueDecomposition）:矩阵奇异值分解是本科数学课程中的必学部分，但往往被大家忽略。这个分解除了很直观，更重要的是非常具有实用价值。本文以几何的视角去观察奇异值分解的过程，并且列举一些奇异值分解的应用。​,1.0,0.9999999999415152,0.9999999999707576
+12月24日21:02,"西电学术""",微博官方,讲座预告：RediscoverSingularValueDecompositionforImageandVideoProcessing，时间：12-2515:30，地点：主楼2区227，讲座人：Weisi,0.9644267960997442,0.6960574806644029,0.8302421383820735
+12月24日17:08,流浪的小花,微博普通,朋友们，我在CNKI学术搜索上查到了《Hermitian‐typegeneralizedsingularvaluedecompositionwithapplications》，给大家分享一下！你也来试试吧!​,0.9946941465613657,0.995721051538528,0.9952075990499468
+11月26日17:32,black,微博普通,"奇异值分解(SingularValueDecomposition)转载原文：topicofthisarticle,the singularvaluedecomposition,isonethatshouldbeapartofthestandardmathematicsundergraduatecurri​",0.999995400110091,0.9381261853990854,0.9690607927545882
+10月15日12:47,大聖的小广,微博会员,@好东西传送门:黄嘉斌用特殊的“主成分分析法”PCA和奇异值分解法（singularvaluedecomposition）SVD做韩国小姐脸部特征的分析，验证了那个著名的观点“大众脸很吸引人，但最吸引人的却不是大众脸”.英文原文,0.9995835225402238,0.999989887461336,0.9997867050007798
+08月22日09:15,"果壳"" s",微博官方,谈谈SVD和,0.7039920740886424,0.3293418291102329,0.5166669515994377
+04月13日03:12,IT技术博,微博个人,矩阵奇异值分解（SingularValueDecomposition，SVD）的动画演示，有助于建立直观的几何形像。来自Wikipedia：​,0.9999981742688682,0.9999974998138188,0.9999978370413435
+02月08日22:25,"逻辑引擎""",微博个人,"奇异值分解SingularValueDecomposition,SVD用矩阵A乘以向量x，将获得一个新的向量y。其中，矩阵A对向量x可以进行两种变换：旋转伸缩例如：(a)中即旋转又伸缩，(b)中仅仅进行旋转，(c)中仅仅进行伸缩。奇异值分解是对矩阵的一种因素分解，将一…​",1.0,0.9999999192146684,0.9999999596073341
+12月12日12:40,小小人_V,微博普通,"WeRecommendaSingularValueDecompositionInthisarticle,wewillofferageometricexplanationofsingularvaluedecompositionsandlookatsomeoftheapplicationsofthem,谢谢@家铭_口罩侠推荐​",0.9703124633122151,0.77313172402312,0.8717220936676675
+11月13日10:26,最新IT播,微博普通,谈谈SVD和,0.7039920740886424,0.3293418291102329,0.5166669515994377
+10月28日15:10,Robox,微博普通,噩梦般的TextAnalytics作业，大半夜的查了半天线性代数的百科——百度百科上的中文也看不懂，维基百科上的英文也看不懂。什么叫用kneeofthecurve方法决定保留多少个singularvaluedecomposition的结果​,0.0007206416383825909,0.9631754128783973,0.4819480272583899
+06月13日16:57,IT技术猿,微博达人,谈谈SVD和,0.7039920740886424,0.3293418291102329,0.5166669515994377
+01月30日11:16,黑龙江天若,微博普通,发表了博文《WeRecommendaSingularValueDecomposition》-​,0.653681417895749,0.6564232147076791,0.655052316301714
+08月30日00:19,JSCON,微博普通,SVD在推荐系统中的应用声明本文主要参考自论文《ASINGU,0.5219820989285933,0.7495244331025479,0.6357532660155706
+03月13日23:02,"狮象男"" ",微博普通,"粉丝们，我在学习singularvaluedecomposition,你在干什么？​",0.3498421279268068,0.7366023960108212,0.5432222619688141
+08月08日17:49,陈涛sea,微博普通,,blank,blank,blank
+04月20日09:59,Panda,微博达人,昨天看完了GilbertStrang大神线性代数书里关于SVD（SingularValueDecomposition）的那部分，作者介绍了这个知识在“Jpeg图片压缩”和“倒排索引表压缩”中的应用，非常实用非常给力，爽透了。还是那句话，国内教材害死人，学好英语，全盘西化。​,0.9983698673156508,0.9993777179065125,0.9988737926110817
+04月04日10:52,"丕子"" s",微博达人,关于“SVD奇异值分解（Singularvaluedecomposition）”的几篇博文​,0.9999853974399833,0.9014796858776217,0.9507325416588025
+03月04日09:18,玄雲Ely,微博达人,整理一篇文档的时候，突然看到linearleastsquares/singularvaluedecomposition，熟悉的词一个个的蹦出来。突然意识到，原来这才是我的本行啊​,0.09438817886353101,0.4623628727514726,0.2783755258075018
+12月09日10:20,"一生有米""",微博达人,得把HigherOrderSingularValueDecomposition和RankingTagsFactorization的机制和作用彻底理解清楚。不然对TensorModel的Matrix处理上细节问题无法得到其意义和改进。怎么这么多的DecompositionMethods，只有这两种是最有效的呢。。。。。​,0.9381023646282993,0.8853810689320806,0.91174171678019
+02月21日20:29,鬆弛熊_R,微博未知,"PrincipleComponentAnalysis,SingularValueDecomposition,",0.7039920740886424,0.5,0.6019960370443211

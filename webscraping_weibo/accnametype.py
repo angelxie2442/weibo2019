@@ -3,6 +3,9 @@ from bs4 import BeautifulSoup
 
 #extract names
 def accNameList(parts):
+    temppp=parts.getElementById("myAnchor").getAttribute("target")
+    print("dididi")
+    print(temppp)
     a=len(parts)
     nameList=[]
     for i in range(a):
