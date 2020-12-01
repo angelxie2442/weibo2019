@@ -7,13 +7,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
 
-jieba.suggest_freq('5月', True)
-jieba.suggest_freq('老男人', True)
-jieba.suggest_freq('什么鬼', True)
-jieba.suggest_freq('文化自信', True)
-jieba.suggest_freq('跌了', True)
-jieba.suggest_freq('特朗普', True)
-jieba.suggest_freq('川普', True)
+
 
 
 ##extract content column from spreadsheet
